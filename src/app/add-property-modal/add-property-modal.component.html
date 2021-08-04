@@ -1,0 +1,37 @@
+<div class="popUp">
+    <div class="popUpWrap">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <h2> 
+                    Add Property
+                </h2>
+            </div>
+        </div>
+        <div class="row">
+            
+            <div class="col-md-2">
+    
+            </div>
+            <div class="col-md-8 text-center">
+                <div *ngIf='errorMessage?.length > 0'>
+                    {{ errorMessage }}
+                </div>
+                <form [formGroup]='addPropertyFg' (ngSubmit)='onSubmit()'>
+                    <input type="text" class="form-control" placeholder="name" formControlName="name">
+                    <br/>
+                    <input type="text" class="form-control" placeholder="location" formControlName="location">
+                    <br/>
+                    <input type="text" class="form-control" placeholder="size" formControlName="size">
+                    <br/>
+                    <button class="btn btn-primary text-center" type="submit">
+                        Add Property
+                    </button>
+                </form>
+            </div>
+            <div class="col-md-2">
+    
+            </div>
+    
+        </div>
+    </div>
+</div>

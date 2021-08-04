@@ -1,1 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap.css";
+.colorWhite {
+    color: white;
+}
+.bgColBlack {
+    background-color: black;
+}
+.minHeight{
+    min-height:400px;
+}
+.w-20{
+    width:20%;
+}
+.borderSpan{
+    border-bottom: 3px solid black;
+}

@@ -1,0 +1,26 @@
+.popUp {
+    top: 0%;
+    right: auto;
+    bottom: auto;
+    left: auto;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(29,29,35,0.65);
+    z-index: 20;
+}
+.popUp .popUpWrap {
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    left: 33%;
+    position: absolute;
+    transform: translateY(calc(-50% + 0.5px));
+    background: white;
+    padding: 25px 25px 15px 25px;
+    max-width: 457px;
+    width: 100%;
+    height: 60vh;
+    overflow: auto;
+    margin: 0 auto;
+  }

@@ -1,0 +1,73 @@
+<div class="container p-3">
+    <div class="row">
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4">
+        </div>
+        <div class="col-md-4 text-center">
+            <button class="btn btn-primary" (click)='addProperty()'>
+                Add Property
+            </button>
+        </div>
+    </div>
+    <div class="minHeight">
+        <div class="col-md-12 text-center" >
+            <h5 class="h2 mb-5">
+                <span class="borderSpan">
+                    Properties
+                </span>
+            </h5>
+            <h6 class="text-center" *ngIf='this.globalService?.propertyArr?.length == 0' >
+                No property found !!
+            </h6>
+        </div>
+        <div *ngIf='this.globalService?.propertyArr?.length > 0' >
+            <div class='d-flex'>
+                <div class="w-20 text-center border border-dark">
+                    <h5>
+                        Serial No
+                    </h5>
+                </div>
+                <div class="w-20 text-center border border-dark">
+                    <h5> 
+                        Name
+                    </h5>
+                </div>
+                <div class="w-20 text-center border border-dark">
+                    <h5> 
+                        Location
+                    </h5>
+                </div>
+                <div class="w-20 text-center border border-dark">
+                    <h5> 
+                        Size
+                    </h5>
+                </div>
+                <div class="w-20 text-center border border-dark">
+                    <h5> 
+                        Action
+                    </h5>
+                </div>
+            </div>
+            <div *ngFor='let i of globalService?.propertyArr; let in = index' class='d-flex'>
+                <div class="w-20 text-center border border-dark">
+                    {{ in+1 }}
+                </div> 
+                <div class="w-20 text-center border border-dark">
+                    {{ i?.name }}
+                </div> 
+                <div class="w-20 text-center border border-dark">
+                    {{ i?.location }}
+                </div> 
+                <div class="w-20 text-center border border-dark">
+                    {{ i?.size }}
+                </div> 
+                <div class="w-20 text-center border border-dark">
+                    <button class="btn btn-outline-danger btn-sm p-2" type="button" (click)="deleteProperty(i)">
+                        Delete
+                    </button>
+                </div> 
+            </div>
+        </div>
+    </div>
+</div>
